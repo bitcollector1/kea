@@ -1,0 +1,6 @@
+sudo ip link add link enp1s0 name dummy0 type ipvlan mode l2
+sudo ip addr add 10.110.118.1/24 dev dummy0
+sudo ip link set dummy0 up
+sudo ip route add 10.110.118.5 dev dummy0
+sudo ip route add 10.110.118.7 dev dummy0
+
